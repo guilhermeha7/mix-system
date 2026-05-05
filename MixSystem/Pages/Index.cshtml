@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container-main">
+    <header>
+        <h3 class="titulo">MixSystem</h3><br /><br />
+    </header>
+    <main>
+        <form method="post"> <!--asp-action: Envia o objeto Mix para o evento Create após submeter o formulário-->
+            <div class="mb-1">
+                <label class="mb-1">Qtd de Músicas:</label>
+                <input asp-for="Mix.QtdDeMusicas" class="form-control inputs-size" type="number" value="100" />
+            </div>
+            <span asp-validation-for="Mix.QtdDeMusicas" class="text-danger mb-4"></span>
+
+            <div class="mb-1" style="display: flex; flex-direction: column;">
+                <label class="mb-1">Diretório das Músicas:</label>
+                <input type="text" asp-for="Mix.Diretorio" placeholder="C:\Músicas" class="form-control inputs-size" />
+            </div>
+            <span asp-validation-for="Mix.Diretorio" class="text-danger mb-4"></span>
+
+            <input class="mb-5 btn btn-primary inputs-size" type="submit" value="Gerar mix" />
+           
+            @if (ViewData["mensagemDeErro"] != null)
+            {
+                <span class="text-danger">@ViewData["mensagemDeErro"]</span>
+            }
+            else if (ViewData["mensagemDeSucesso"] != null)
+            {
+                <span class="text-success">@ViewData["mensagemDeSucesso"]</span>
+            }
+        </form>
+    </main>
+</div>

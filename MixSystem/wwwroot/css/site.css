@@ -1,0 +1,83 @@
+/*O arquivo site.css é um estilo que se aplica a todas as páginas do seu projeto por padrão.*/
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.container-main {
+    width: 90%; /* O tamanho do container acompanhará as telas pequenas */
+    max-width: 620px; /* Define o tamanho máximo do container */
+
+    /* O valor auto ao mesmo tempo em margin-left e margin-right centraliza o elemento filho no seu container/elemento pai */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    padding: 80px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end; /* Empurra o conteúdo para a direita */
+    padding: 20px 40px 20px 0px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os elementos filhos à esquerda do container */
+}
+
+.titulo {
+    text-align: center;
+}
+
+.inputs-size {
+    width: 160px;
+}
+
+.btn-primary {
+    background-color: #6c5ce7 !important;
+    border-color: #6c5ce7 !important;
+}
+
+    .btn-primary:hover {
+        background-color: #926eff !important;
+        border-color: #926eff !important;
+    }
+
+    .btn-primary:focus, .btn-primary:active {
+        background-color: #a29bfe !important;
+        box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.25) !important;
+    }
